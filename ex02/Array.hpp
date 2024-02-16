@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: baloo <baloo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 16:06:31 by larmenou          #+#    #+#             */
-/*   Updated: 2024/02/15 17:14:06 by larmenou         ###   ########.fr       */
+/*   Updated: 2024/02/16 12:10:27 by baloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,14 @@ class Array
 
 		T& operator[](std::size_t idx);
 		unsigned int size() const;
+
+		class OutOfBoundsException : public std::exception
+		{
+			const char * what() const throw()
+			{
+				return ("Index out of bounds");
+			}
+		};
 };
 
 #include "Array.tpp"
