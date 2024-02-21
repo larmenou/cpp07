@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: baloo <baloo@student.42.fr>                +#+  +:+       +#+        */
+/*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 16:06:31 by larmenou          #+#    #+#             */
-/*   Updated: 2024/02/16 12:10:27 by baloo            ###   ########.fr       */
+/*   Updated: 2024/02/19 11:52:52 by larmenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class Array
 		{
 			const char * what() const throw()
 			{
-				return ("Index out of bounds");
+				return ("\x1B[33mIndex out of bounds\033[0m");
 			}
 		};
 };
